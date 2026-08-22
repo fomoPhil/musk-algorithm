@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="down" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#4ADE80"/>
+    </marker>
+  </defs>
+
+  <rect x="8" y="8" width="1184" height="424" rx="16" fill="#0B1220" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="60" y="64" font-size="15" font-weight="700" letter-spacing="3" fill="#64748B">WHEN TO USE IT</text>
+  <text x="60" y="112" font-size="34" font-weight="700" fill="#E2E8F0">Before you commit, not after.</text>
+
+  <!-- run markers -->
+  <text x="262" y="180" font-size="21" font-weight="700" letter-spacing="1" fill="#4ADE80" text-anchor="middle">RUN IT HERE</text>
+  <line x1="262" y1="194" x2="262" y2="232" stroke="#4ADE80" stroke-width="3" marker-end="url(#down)"/>
+  <text x="937" y="180" font-size="21" font-weight="700" letter-spacing="1" fill="#4ADE80" text-anchor="middle">RUN IT AGAIN</text>
+  <line x1="937" y1="194" x2="937" y2="232" stroke="#4ADE80" stroke-width="3" marker-end="url(#down)"/>
+
+  <!-- timeline -->
+  <line x1="100" y1="260" x2="1100" y2="260" stroke="#475569" stroke-width="2.5"/>
+  <circle cx="150" cy="260" r="11" fill="#94A3B8"/>
+  <circle cx="375" cy="260" r="11" fill="#94A3B8"/>
+  <circle cx="600" cy="260" r="11" fill="#94A3B8"/>
+  <circle cx="825" cy="260" r="11" fill="#94A3B8"/>
+  <circle cx="1050" cy="260" r="11" fill="#F59E0B"/>
+
+  <text x="150" y="308" font-size="22" font-weight="700" fill="#E2E8F0" text-anchor="middle">IDEA</text>
+  <text x="375" y="308" font-size="22" font-weight="700" fill="#E2E8F0" text-anchor="middle">PLAN</text>
+  <text x="600" y="308" font-size="22" font-weight="700" fill="#E2E8F0" text-anchor="middle">BUILD</text>
+  <text x="825" y="308" font-size="22" font-weight="700" fill="#E2E8F0" text-anchor="middle">SHIP</text>
+  <text x="1050" y="308" font-size="22" font-weight="700" fill="#E2E8F0" text-anchor="middle">AUTOMATE</text>
+
+  <!-- skip line -->
+  <text x="600" y="386" font-size="20" fill="#94A3B8" text-anchor="middle">Skip it for bug fixes, small edits, and scope you've already validated.</text>
+</svg>

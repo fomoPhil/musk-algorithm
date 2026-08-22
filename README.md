@@ -24,6 +24,8 @@ Most skills make your assistant do *more*: more process, more checklists, more d
 
 ## When to use it
 
+![When to use it: run it between idea and plan, and again before automating. Skip it for bug fixes and validated scope.](docs/when-to-use.svg)
+
 **Reach for it:**
 
 - *Before* writing any plan, spec, or design doc
