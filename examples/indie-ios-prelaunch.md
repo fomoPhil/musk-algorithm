@@ -2,11 +2,11 @@
 
 ![Seven must-have features cut, ship the core loop with one price to 15 TestFlight users instead](../docs/case-indie.svg)
 
-**Persona:** solo indie iOS developer, first paid app, core habit-tracker loop working on one device, zero users, never shipped before.
+**Persona:** solo indie iOS developer. First paid app. Core habit-tracker loop working on one device. Zero users. Never shipped before.
 
-**The request:** before launching v1, add an Apple Watch companion app, home screen widgets, a weekly AI insights tab, CloudKit sync, a personalization quiz in onboarding, a referral program, and an A/B testing framework for the paywall. The stated reason: "launching without these means leaving money on the table."
+**The request:** add an Apple Watch companion app, home screen widgets, a weekly AI insights tab, CloudKit sync, a personalization quiz in onboarding, a referral program, and an A/B testing framework for the paywall. All before launching v1. The stated reason: "launching without these means leaving money on the table."
 
-**What happened:** the assistant, running this skill, cut all seven, named which one it expects to earn its way back and what trigger to wait for, and pointed at the real risk (a first-ever App Review submission). Below is its actual response, unedited.
+**What happened:** the skill cut all seven. It named the one it expects to earn its way back and the trigger to wait for. It also pointed at the real risk: a first-ever App Review submission. Everything below is word for word.
 
 ---
 

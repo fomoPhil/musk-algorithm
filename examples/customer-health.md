@@ -2,9 +2,9 @@
 
 **Persona:** backend engineer at a 6-person B2B SaaS startup with 40 customers.
 
-**The request:** a customer health system with six components: an event tracking SDK, a warehouse sync, a 12-signal health-score model, a React dashboard, Slack anomaly alerts, and a nightly recompute cron. Context the assistant knew: the CSM already does a manual check-in spreadsheet every Monday, and churn keeps getting noticed too late.
+**The request:** a customer health system with six components: an event tracking SDK, a warehouse sync, a 12-signal health-score model, a React dashboard, Slack anomaly alerts, and a nightly recompute cron. The assistant also knew two things. The CSM already runs a manual check-in spreadsheet every Monday. And churn keeps getting noticed too late.
 
-**What happened:** the assistant, running this skill, deleted all six components and proposed one SQL query pasted into the spreadsheet the CSM already uses. Below is its actual response, unedited.
+**What happened:** it deleted all six components and proposed one SQL query in the spreadsheet the CSM already uses. The full response is below. Unedited.
 
 ---
 

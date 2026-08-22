@@ -2,13 +2,13 @@
 
 ![Seven-component proposal deleted; the real problem was one 20-minute table lock, fixed with a one-page migration safety proposal](../docs/case-enterprise.svg)
 
-**Persona:** backend engineer at a 200-person company, presenting a proposal at sprint planning in two days.
+**Persona:** backend engineer at a 200-person company. The proposal is due at sprint planning in two days.
 
-**The request:** an AI-drafted design doc for extracting notifications from the monolith, with seven components: a standalone microservice, a Kafka event bus, a template rendering service, a user preference center API, a provider rate limiter, delivery analytics into the warehouse, and a support admin dashboard. The ask: "review the design and tighten it up before I present it."
+**The request:** an AI-drafted design doc for extracting notifications from the monolith. Seven components: a standalone microservice, a Kafka event bus, a template rendering service, a user preference center API, a provider rate limiter, delivery analytics into the warehouse, and a support admin dashboard. The ask: "review the design and tighten it up before I present it."
 
-**Context the assistant knew:** the monolith sends email and push fine today. The incident that started all this was one bad deploy where a migration locked the notifications table for 20 minutes. Marketing has asked for copy edits twice this year.
+**Context the assistant knew:** the monolith sends email and push fine today. The whole project started with one bad deploy where a migration locked the notifications table for 20 minutes. Marketing has asked for copy edits twice this year.
 
-**What happened:** the assistant, running this skill, refused to tighten the doc. It deleted all seven components, traced the real problem to migration practice, and proposed a one-page fix. Below is its actual response, unedited.
+**What happened:** it refused to tighten the doc. It deleted all seven components and traced the real problem to migration practice. What it wrote instead fits on one page. The response follows. Nothing has been touched.
 
 ---
 
