@@ -1,5 +1,7 @@
 # Case study: the pre-launch feature pile
 
+![Seven must-have features cut, ship the core loop with one price to 15 TestFlight users instead](../docs/case-indie.svg)
+
 **Persona:** solo indie iOS developer, first paid app, core habit-tracker loop working on one device, zero users, never shipped before.
 
 **The request:** before launching v1, add an Apple Watch companion app, home screen widgets, a weekly AI insights tab, CloudKit sync, a personalization quiz in onboarding, a referral program, and an A/B testing framework for the paywall. The stated reason: "launching without these means leaving money on the table."

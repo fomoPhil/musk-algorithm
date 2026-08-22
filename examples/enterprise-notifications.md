@@ -1,5 +1,7 @@
 # Case study: the AI-drafted microservice design doc
 
+![Seven-component proposal deleted; the real problem was one 20-minute table lock, fixed with a one-page migration safety proposal](../docs/case-enterprise.svg)
+
 **Persona:** backend engineer at a 200-person company, presenting a proposal at sprint planning in two days.
 
 **The request:** an AI-drafted design doc for extracting notifications from the monolith, with seven components: a standalone microservice, a Kafka event bus, a template rendering service, a user preference center API, a provider rate limiter, delivery analytics into the warehouse, and a support admin dashboard. The ask: "review the design and tighten it up before I present it."
