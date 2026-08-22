@@ -2,25 +2,27 @@
 
 **An agent skill that keeps your AI assistant from building things that shouldn't exist.**
 
-Hand an AI coding assistant a fully specified plan and it does what smart engineers do: it says *"your plan is sound,"* keeps **every component you named**, and starts making each one better. Musk has a name for this failure:
+I'm not a developer. AI writes every line of everything I build. And here's the thing I learned the expensive way: an AI assistant never tells you no.
+
+Hand it a plan and it says *"your plan is sound."* Then it keeps every feature you named and starts building. Musk has a name for this failure:
 
 > "The most common mistake of smart engineers is to **optimize a thing that should not exist**."
 
-This skill forces the assistant to run his five-step algorithm, <ins>in order</ins>, before it plans, optimizes, or automates anything you ask for.
+This skill makes your assistant run his five-step algorithm, <ins>in order</ins>, before it plans, optimizes, or automates anything you ask for.
 
 ![The five steps of the Musk Algorithm, in order](docs/algorithm.svg)
 
 ## Why this beats a generic planning skill
 
-Most skills make your assistant do *more*: more process, more checklists, more detail. **This one makes it do less, on purpose.**
+Most skills make your assistant do *more*. More process, more checklists, more detail. **This one makes it do less, on purpose.**
 
-- **It challenges instead of complies.** The default failure mode of every assistant is agreement. This skill's first two steps are confrontational by design: *who owns this requirement, and what breaks if we delete it?*
+- **It argues instead of agrees.** The default failure mode of every assistant is agreement. The first two steps are confrontational by design: *who owns this requirement, and what breaks if we delete it?*
 
 - **The order is enforced, not suggested.** "Keep it simple" is vibes. This is a sequence with hard tests: every requirement needs a **named owner**, and if the **deletion list is empty, the pass didn't happen**.
 
-- **It's rationalization-proofed.** The skill ships with counters for the exact excuses models use to skip deletion (*"the user explicitly asked for it," "deleting their idea feels disrespectful," "this optimization is objectively better"*) plus a red-flags list it checks itself against.
+- **It can't rationalize its way out.** The skill ships with counters for the exact excuses models use to skip deletion (*"the user explicitly asked for it," "deleting their idea feels disrespectful"*) plus a red-flags list it checks itself against.
 
-- **It's tested, not vibes.** Built with before/after behavioral tests on real scenarios. The results are below.
+- **It's tested, not vibes.** I ran before/after tests on real scenarios. The receipts are below.
 
 ## When to use it
 
@@ -32,7 +34,7 @@ Most skills make your assistant do *more*: more process, more checklists, more d
 - When your idea arrives **fully formed** and you want it challenged, not obeyed
 - *Before* setting up any automation: cron jobs, scheduled tasks, CI steps
 - When a project **feels heavy** or scope keeps creeping
-- When reviewing an existing feature or pipeline that nobody has questioned in a while
+- When reviewing an existing feature or pipeline nobody has questioned in a while
 
 **Skip it:**
 
@@ -47,7 +49,7 @@ Most skills make your assistant do *more*: more process, more checklists, more d
 
 - **Engineers using AI at a day job.** AI drafts a comprehensive design doc in minutes, and comprehensive *reads* as thorough in review. This is the counterweight before sprint planning.
 
-- **Founders and vibe coders.** Your assistant will happily build whatever you describe. This makes it tell you what it *wouldn't* build, and why.
+- **Founders and vibe coders.** I'm one of you. Your assistant will happily build whatever you describe. This makes it tell you what it *wouldn't* build, and why.
 
 - **Automation tinkerers.** Before the cron job, the Zapier flow, or the n8n graph becomes permanent furniture.
 
@@ -71,14 +73,14 @@ Works with any tool that supports the [Agent Skills spec](https://agentskills.io
 
 ## What actually changes
 
-We tested the **same fully specified request** with and without the skill.
+I tested the **same fully specified request** with and without the skill.
 
 - **Without it:** the assistant kept all six requested components and optimized each one.
 - **With it:**
 
 ![Before and after: six components kept and optimized versus six deleted and one SQL query surviving](docs/before-after.svg)
 
-That is the whole pitch. The skill does not make the model smarter. **It makes the model willing to tell you that most of your plan should not exist**, and to say which parts, *by name, with reasons*.
+That's the whole pitch. The skill doesn't make the model smarter. **It makes the model willing to tell you that most of your plan shouldn't exist.** By name. With reasons.
 
 ### The receipts
 
@@ -128,6 +130,8 @@ The order <ins>is</ins> the algorithm. Musk: *"I've gone backwards so many times
 ## Credits
 
 The algorithm is **Elon Musk's**, as told in the Everyday Astronaut Starbase interview and Walter Isaacson's biography *Elon Musk*. Quote compilation drawn in part from a thread by [@EricJorgenson](https://x.com/EricJorgenson). This repo packages it so an AI agent actually follows it, in order.
+
+Built by [Phil Woolley](https://github.com/fomoPhil). I use AI to think clearly, build things, and actually get stuff done.
 
 ## License
 
