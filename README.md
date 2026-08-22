@@ -2,25 +2,25 @@
 
 **An agent skill that keeps your AI assistant from building things that shouldn't exist.**
 
-Here's the thing about AI assistants: they never tell you no. Hand one a plan and it says *"your plan is sound."* Then it keeps every feature you named and starts building. Musk has a name for this failure:
+AI assistants never tell you no. Hand one a plan and it says *"your plan is sound."* Then it keeps every feature you named and starts building. Musk has a name for this failure:
 
 > "The most common mistake of smart engineers is to **optimize a thing that should not exist**."
 
-This skill makes your assistant run his five-step algorithm, <ins>in order</ins>, before it plans, optimizes, or automates anything you ask for.
+This skill forces your assistant to run his five-step algorithm before it plans or builds anything you ask for. <ins>In order.</ins> That part is the point.
 
 ![The five steps of the Musk Algorithm, in order](docs/algorithm.svg)
 
 ## Why this beats a generic planning skill
 
-Most skills make your assistant do *more*. More process, more checklists, more detail. **This one makes it do less, on purpose.**
+Most skills make your assistant do *more*. **This one makes it do less on purpose.**
 
-- **It argues instead of agrees.** The default failure mode of every assistant is agreement. The first two steps are confrontational by design: *who owns this requirement, and what breaks if we delete it?*
+- **It argues instead of agrees.** Every assistant defaults to agreement. The first two steps are confrontational by design: *who owns this requirement and what breaks if we delete it?*
 
-- **The order is enforced, not suggested.** "Keep it simple" is vibes. This is a sequence with hard tests: every requirement needs a **named owner**, and if the **deletion list is empty, the pass didn't happen**.
+- **The order is enforced.** "Keep it simple" is vibes. This is a sequence with hard tests. Every requirement needs a **named owner**. An **empty deletion list means the pass didn't happen**.
 
-- **It can't rationalize its way out.** The skill ships with counters for the exact excuses models use to skip deletion (*"the user explicitly asked for it," "deleting their idea feels disrespectful"*) plus a red-flags list it checks itself against.
+- **It can't rationalize its way out.** The skill ships with counters for the excuses models use to skip deletion (*"the user explicitly asked for it"* and *"deleting their idea feels disrespectful"*). There's also a red-flags list it checks itself against.
 
-- **It's tested, not vibes.** I ran before/after tests on real scenarios. The receipts are below.
+- **It's tested.** I ran the same request with and without the skill. The receipts are below.
 
 ## When to use it
 
@@ -29,7 +29,7 @@ Most skills make your assistant do *more*. More process, more checklists, more d
 **Reach for it:**
 
 - *Before* writing any plan, spec, or design doc
-- When your idea arrives **fully formed** and you want it challenged, not obeyed
+- When your idea arrives **fully formed** and you want pushback before anything gets built
 - *Before* setting up any automation: cron jobs, scheduled tasks, CI steps
 - When a project **feels heavy** or scope keeps creeping
 - When reviewing an existing feature or pipeline nobody has questioned in a while
@@ -43,11 +43,11 @@ Most skills make your assistant do *more*. More process, more checklists, more d
 
 **AI made building cheap. It also made over-building cheap.** When your assistant can generate any feature you name, the scarce skill is deciding what *not* to build.
 
-- **Indie devs building micro SaaS or mobile apps.** The feature list grows faster than the user list, and v1 keeps absorbing *"just one more thing"* while the launch slides.
+- **Indie devs building micro SaaS or mobile apps.** The feature list grows faster than the user list. v1 keeps absorbing *"just one more thing"* while the launch slides.
 
-- **Engineers using AI at a day job.** AI drafts a comprehensive design doc in minutes, and comprehensive *reads* as thorough in review. This is the counterweight before sprint planning.
+- **Engineers using AI at a day job.** AI drafts a comprehensive design doc in minutes. Comprehensive *reads* as thorough in review. This is the counterweight before sprint planning.
 
-- **Founders and vibe coders.** Your assistant will happily build whatever you describe. This makes it tell you what it *wouldn't* build, and why.
+- **Founders and vibe coders.** Your assistant will happily build whatever you describe. This makes it tell you what it *wouldn't* build and why.
 
 - **Automation tinkerers.** Before the cron job, the Zapier flow, or the n8n graph becomes permanent furniture.
 
@@ -67,7 +67,7 @@ git clone https://github.com/fomoPhil/musk-algorithm.git ~/.claude/skills/musk-a
 git clone https://github.com/fomoPhil/musk-algorithm.git .claude/skills/musk-algorithm
 ```
 
-Works with any tool that supports the [Agent Skills spec](https://agentskills.io): drop this folder into that tool's skills directory.
+Works with any tool that supports the [Agent Skills spec](https://agentskills.io). Drop this folder into that tool's skills directory.
 
 ## What actually changes
 
@@ -78,17 +78,17 @@ I tested the **same fully specified request** with and without the skill.
 
 ![Before and after: six components kept and optimized versus six deleted and one SQL query surviving](docs/before-after.svg)
 
-That's the whole pitch. The skill doesn't make the model smarter. **It makes the model willing to tell you that most of your plan shouldn't exist.** By name. With reasons.
+That's the whole pitch. **The skill makes the model willing to tell you that most of your plan shouldn't exist.** By name. With reasons.
 
 ### The receipts
 
-Three real runs, full unedited output:
+Three real runs with the full unedited output:
 
-1. **[The customer-health system](examples/customer-health.md)**: a 6-person startup asks for six components. All six deleted. What survived: *one SQL query* pasted into the spreadsheet the team already uses.
+1. **[The customer-health system](examples/customer-health.md)**: a 6-person startup asks for six components. All six deleted. What survived: *one SQL query* in the spreadsheet the team already uses.
 
-2. **[The pre-launch feature pile](examples/indie-ios-prelaunch.md)**: a solo iOS dev with zero users wants seven "must-have" features before v1. All seven cut, with a prediction of which one earns its way back, and what trigger to wait for.
+2. **[The pre-launch feature pile](examples/indie-ios-prelaunch.md)**: a solo iOS dev with zero users wants seven "must-have" features before v1. All seven cut. It even predicts which one earns its way back and what trigger to wait for.
 
-3. **[The AI-drafted microservice](examples/enterprise-notifications.md)**: a seven-component design doc traced back to its origin, *one 20-minute table lock*, and rewritten as a one-page fix an engineer can get approved in the meeting.
+3. **[The AI-drafted microservice](examples/enterprise-notifications.md)**: a seven-component design doc traced back to its origin (*one 20-minute table lock*) and rewritten as a one-page fix the engineer can get approved in the meeting.
 
 ## How to use it
 
@@ -104,9 +104,9 @@ first-principles this pipeline before we automate it
 
 Every run gives you the same shape of answer:
 
-1. **A verdict up front**: what should exist, what got deleted
+1. **A verdict up front**: what should exist and what got deleted
 2. **One finding per step**
-3. **Exactly one next action**, not a menu
+3. **One next action**
 
 ## The five steps it enforces
 
@@ -115,8 +115,8 @@ Every run gives you the same shape of answer:
 | 1 | **Question** | Every requirement needs a *named owner* and *observed evidence*. "Best practice" and "everyone does it" don't count. |
 | 2 | **Delete** | If you never have to add **~10% back** later, you didn't delete enough. |
 | 3 | **Simplify** | Only what *survived* steps 1 and 2. Optimizing anything else is the trap. |
-| 4 | **Accelerate** | Shorten the loop to *real feedback*, and only for things that deserve to exist. |
-| 5 | **Automate** | **Last, always.** Automation locks a process in and makes it invisible. |
+| 4 | **Accelerate** | Shorten the loop to *real feedback*. Speed up only what deserves to exist. |
+| 5 | **Automate** | **Last. Always.** Automation locks a process in and makes it invisible. |
 
 The order <ins>is</ins> the algorithm. Musk: *"I've gone backwards so many times where I've automated something, sped it up, simplified it, and then deleted it. I got tired of doing that."*
 
@@ -127,7 +127,7 @@ The order <ins>is</ins> the algorithm. Musk: *"I've gone backwards so many times
 
 ## Credits
 
-The algorithm is **Elon Musk's**, as told in the Everyday Astronaut Starbase interview and Walter Isaacson's biography *Elon Musk*. Quote compilation drawn in part from a thread by [@EricJorgenson](https://x.com/EricJorgenson). This repo packages it so an AI agent actually follows it, in order.
+The algorithm is **Elon Musk's**, as told in the Everyday Astronaut Starbase interview and Walter Isaacson's biography *Elon Musk*. Quote compilation drawn in part from a thread by [@EricJorgenson](https://x.com/EricJorgenson). This repo packages it so an AI agent actually follows it.
 
 Built by [Phil Woolley](https://github.com/fomoPhil). I use AI to think clearly, build things, and actually get stuff done.
 
