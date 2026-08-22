@@ -20,7 +20,7 @@ The order IS the algorithm. Skipping ahead means polishing, speeding up, or perm
 
 ## The Five Steps (strict order)
 
-**1. Question every requirement.** Restate the underlying problem in one sentence before touching the component list. Every requirement gets a named owner and observed evidence. "Best practice," a tutorial, an old design doc, a previous conversation, or "everyone does it" is not an owner. The user naming a component is not evidence that component solves their problem; ask what they actually observed. Requirements from smart sources are the most dangerous because nobody questions them.
+**1. Question every requirement.** Restate the underlying problem in one sentence before touching the component list. Every requirement gets a named owner and observed evidence. "Best practice," a tutorial, an old design doc, a previous conversation, or "everyone does it" is not an owner. The user naming a component is not evidence that component solves their problem; ask what they actually observed. Requirements from smart sources are the most dangerous because nobody questions them. The ownership test works for solo builders too: ownership is about where a requirement came from, not who builds it. A solo builder citing a real observation (their own use, a named user's ask) is a valid owner. A competitor's screenshot, a tutorial, or a fear of missing out owns nothing.
 
 **2. Try to delete.** For each surviving component, ask: what breaks if this does not exist? Actually propose deletions; adding back later is cheap. If the deletion list is empty, the pass did not happen. Target enough deletion that roughly 10% has to come back later. Common delete targets: scoring or judging layers where a human already reviews the output, logging and tuning infrastructure for unproven features, configuration surface, abstraction layers with one caller, "for later" hooks.
 
@@ -33,6 +33,8 @@ The order IS the algorithm. Skipping ahead means polishing, speeding up, or perm
 ## Output Format
 
 Lead with the verdict: what should exist and what got deleted, in 2 to 3 sentences. Then a short table, one row per step, with the finding. End with exactly one recommended next action, not a menu.
+
+When the target is an existing product or project with many components (rather than a single proposed feature), also produce a component table: one row per component, with columns for what it is, where it stands (working, half-built, not started), and the verdict (keep, finish, cut, don't start). Plain language in every cell; the reader may not be technical. This table is usually the clearest artifact the run produces, and the per-step findings exist to back it up.
 
 ## Red Flags (stop, return to step 1)
 
