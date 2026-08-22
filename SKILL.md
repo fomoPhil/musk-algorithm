@@ -32,9 +32,12 @@ The order IS the algorithm. Skipping ahead means polishing, speeding up, or perm
 
 ## Output Format
 
-Lead with the verdict: what should exist and what got deleted, in 2 to 3 sentences. Then a short table, one row per step, with the finding. End with exactly one recommended next action, not a menu.
+Lead with the verdict: what should exist and what got deleted, in 2 to 3 sentences. End with exactly one recommended next action, not a menu. In between, tables carry the load; prose is only for detail a table cell can't hold.
 
-When the target is an existing product or project with many components (rather than a single proposed feature), also produce a component table: one row per component, with columns for what it is, where it stands (working, half-built, not started), and the verdict (keep, finish, cut, don't start). Plain language in every cell; the reader may not be technical. This table is usually the clearest artifact the run produces, and the per-step findings exist to back it up.
+- Always include the five-step table: one row per step, with the finding.
+- Whenever the target has more than one piece (a plan, a brainstorm, a feature list, or an existing product), also include a component table: one row per piece. Columns: what it is, who owns it (the person or observation behind it), where it stands if it already exists (working, half-built, not started), and the verdict (build, keep, finish, cut, park, don't start). Drop the status column when nothing exists yet. Plain language in every cell; the reader may not be technical.
+- The component table is the artifact the reader acts on. The step findings and any prose exist to back it up. When a verdict needs defending, one or two sentences in the row or directly under the table beat paragraphs the reader has to piece together.
+- Render both as actual markdown tables (pipe syntax). Never deliver them as labeled paragraphs, headed sections, or bullet lists, even when asked for plain text. If the medium truly cannot show a table, use one aligned line per row.
 
 ## Red Flags (stop, return to step 1)
 
