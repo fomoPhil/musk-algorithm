@@ -39,6 +39,20 @@ Most skills make your assistant do *more*: more process, more checklists, more d
 - Bug fixes and trivial edits
 - Work where scope is already validated and you just need execution
 
+## Who it's for
+
+**AI made building cheap. It also made over-building cheap.** When your assistant can generate any feature you name, the scarce skill is deciding what *not* to build.
+
+- **Indie devs building micro SaaS or mobile apps.** The feature list grows faster than the user list, and v1 keeps absorbing *"just one more thing"* while the launch slides.
+
+- **Engineers using AI at a day job.** AI drafts a comprehensive design doc in minutes, and comprehensive *reads* as thorough in review. This is the counterweight before sprint planning.
+
+- **Founders and vibe coders.** Your assistant will happily build whatever you describe. This makes it tell you what it *wouldn't* build, and why.
+
+- **Automation tinkerers.** Before the cron job, the Zapier flow, or the n8n graph becomes permanent furniture.
+
+- **Anyone staring at a legacy system.** The requirements nobody has questioned since the person who wrote them left.
+
 ## Install in 30 seconds
 
 **Claude Code, all projects:**
@@ -65,6 +79,16 @@ We tested the **same fully specified request** with and without the skill.
 ![Before and after: six components kept and optimized versus six deleted and one SQL query surviving](docs/before-after.svg)
 
 That is the whole pitch. The skill does not make the model smarter. **It makes the model willing to tell you that most of your plan should not exist**, and to say which parts, *by name, with reasons*.
+
+### The receipts
+
+Three real runs, full unedited output:
+
+1. **[The customer-health system](examples/customer-health.md)**: a 6-person startup asks for six components. All six deleted. What survived: *one SQL query* pasted into the spreadsheet the team already uses.
+
+2. **[The pre-launch feature pile](examples/indie-ios-prelaunch.md)**: a solo iOS dev with zero users wants seven "must-have" features before v1. All seven cut, with a prediction of which one earns its way back, and what trigger to wait for.
+
+3. **[The AI-drafted microservice](examples/enterprise-notifications.md)**: a seven-component design doc traced back to its origin, *one 20-minute table lock*, and rewritten as a one-page fix an engineer can get approved in the meeting.
 
 ## How to use it
 
