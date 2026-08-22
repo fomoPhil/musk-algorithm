@@ -2,9 +2,7 @@
 
 **An agent skill that keeps your AI assistant from building things that shouldn't exist.**
 
-I'm not a developer. AI writes every line of everything I build. And here's the thing I learned the expensive way: an AI assistant never tells you no.
-
-Hand it a plan and it says *"your plan is sound."* Then it keeps every feature you named and starts building. Musk has a name for this failure:
+Here's the thing about AI assistants: they never tell you no. Hand one a plan and it says *"your plan is sound."* Then it keeps every feature you named and starts building. Musk has a name for this failure:
 
 > "The most common mistake of smart engineers is to **optimize a thing that should not exist**."
 
@@ -49,7 +47,7 @@ Most skills make your assistant do *more*. More process, more checklists, more d
 
 - **Engineers using AI at a day job.** AI drafts a comprehensive design doc in minutes, and comprehensive *reads* as thorough in review. This is the counterweight before sprint planning.
 
-- **Founders and vibe coders.** I'm one of you. Your assistant will happily build whatever you describe. This makes it tell you what it *wouldn't* build, and why.
+- **Founders and vibe coders.** Your assistant will happily build whatever you describe. This makes it tell you what it *wouldn't* build, and why.
 
 - **Automation tinkerers.** Before the cron job, the Zapier flow, or the n8n graph becomes permanent furniture.
 
