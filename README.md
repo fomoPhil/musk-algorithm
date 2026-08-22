@@ -1,6 +1,6 @@
 # Musk Algorithm
 
-**An agent skill that makes your AI assistant delete before it optimizes.**
+**An agent skill that keeps your AI assistant from building things that shouldn't exist.**
 
 Hand an AI coding assistant a fully specified plan and it does what smart engineers do: it says *"your plan is sound,"* keeps **every component you named**, and starts making each one better. Musk has a name for this failure:
 
