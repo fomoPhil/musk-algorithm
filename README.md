@@ -1,4 +1,4 @@
-# Musk Algorithm
+# Reality Check
 
 **An agent skill that keeps your AI assistant from building things that shouldn't exist.**
 
@@ -8,7 +8,7 @@ AI assistants never tell you no. Hand one a plan and it says *"your plan is soun
 
 This skill forces your assistant to run his five-step algorithm before it plans or builds anything you ask for. <ins>In order.</ins> That part is the point.
 
-![The five steps of the Musk Algorithm, in order](docs/algorithm.svg)
+![The five steps of the Reality Check, in order](docs/algorithm.svg)
 
 ## Why this beats a generic planning skill
 
@@ -58,13 +58,13 @@ Most skills make your assistant do *more*. **This one makes it do less on purpos
 **Claude Code, all projects:**
 
 ```bash
-git clone https://github.com/fomoPhil/musk-algorithm.git ~/.claude/skills/musk-algorithm
+git clone https://github.com/fomoPhil/reality-check.git ~/.claude/skills/reality-check
 ```
 
 **Claude Code, one project:**
 
 ```bash
-git clone https://github.com/fomoPhil/musk-algorithm.git .claude/skills/musk-algorithm
+git clone https://github.com/fomoPhil/reality-check.git .claude/skills/reality-check
 ```
 
 Works with any tool that supports the [Agent Skills spec](https://agentskills.io). Drop this folder into that tool's skills directory.

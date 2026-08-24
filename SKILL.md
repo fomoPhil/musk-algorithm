@@ -1,9 +1,9 @@
 ---
-name: musk-algorithm
-description: Use when planning, scoping, or reviewing any feature, system, process, pipeline, or automation; before optimizing, accelerating, or automating anything; when a request arrives as a fully specified component list; when scope is ballooning or a design feels over-engineered; or when the user asks to run the algorithm, the five steps, or first principles on something.
+name: reality-check
+description: Use when planning, scoping, or reviewing any feature, system, process, pipeline, or automation; before optimizing, accelerating, or automating anything; when a request arrives as a fully specified component list; when scope is ballooning or a design feels over-engineered; or when the user asks for a reality check, to run the algorithm, the five steps, or first principles on something.
 ---
 
-# Musk Algorithm
+# Reality Check
 
 ## Overview
 
